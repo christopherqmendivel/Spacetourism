@@ -1,5 +1,5 @@
 
-.image-bg {
+.image-bg.destination {
     background-image: url('../../../../assets/destination/background-destination-desktop.jpg');
     width: 100%;
     height: 100vh;
@@ -9,4 +9,35 @@
     top: 0;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.dest {
+    padding: 0 6rem;
+}
+
+.destination-list {
+    gap: 1.7rem;
+    list-style: none;
+}
+.destination-list .destination-item {
+    cursor: pointer;
+}
+
+.dest .description {
+    line-height: 2rem;
+    max-width: 27rem;
+}
+
+.title {
+    font-size: 6.2rem;
+    margin: 2.6rem 0.2rem;
+}
+
+.travel-distance {
+    gap: 5rem;
+}
+
+.line-dest {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
 }

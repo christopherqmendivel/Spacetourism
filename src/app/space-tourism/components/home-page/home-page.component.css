@@ -17,26 +17,6 @@
     padding: 10rem 8rem 0 9rem;
 }
 
-.subtitle {
-    font-family: var(--barlow-font-cond);
-    color: var(--tertiary-white);
-    letter-spacing: .2rem;
-    font-weight: 400;
-}
-
-.title {
-    font-family: var(--bellefoir-font);
-    text-transform: uppercase;
-    font-size: 9.4rem;
-}
-
-.info-text {
-    font-family: var(--barlow-font);
-    font-size: 1.1rem;
-    max-width: 28rem;
-    color: var(--tertiary-white);
-}
-
 /* BUTTON RIGHT HOME */
 .circle-hover-contain {
     transition: 0.5s;

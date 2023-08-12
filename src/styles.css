@@ -21,6 +21,48 @@ html, body {
     height: 100%;
 }
 
+/* GLOBAL STYLES TITLE, SUBTITLE, TEXT-INFO*/
+.subtitle {
+    font-family: var(--barlow-font-cond);
+    color: var(--tertiary-white);
+    letter-spacing: .2rem;
+    font-weight: 400;
+    width: fit-content;
+}
+
+.title {
+    font-family: var(--bellefoir-font);
+    text-transform: uppercase;
+    font-size: 9.4rem;
+    color: var(--primary1-white);
+    margin: 1rem;
+}
+
+.description {
+    font-family: var(--barlow-font);
+    font-size: 1.1rem;
+    max-width: 28rem;
+    color: var(--tertiary-white);
+}
+
+.subtitle-number {
+    color: var(--primary1-white);
+    opacity: 0.5;
+}
+
+.title-detail {
+    font-family: var(--barlow-font-cond);
+    color:  var(--tertiary-white);
+    font-size: .9rem;
+    letter-spacing: .2rem;
+    font-weight: 400;
+}
+
+.travel-distance .number {
+    font-family: var(--bellefoir-font);
+    color: var(--primary1-white);
+    font-size: 1.75rem;
+} 
 
 /* STYLE BG HOME */
 

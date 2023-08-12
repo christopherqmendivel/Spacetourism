@@ -8,7 +8,7 @@ app-navbar{
     padding-right: 0;
 }
 
-.cont .one {
+.nav-t {
     position: relative;
     z-index: 1;
 }

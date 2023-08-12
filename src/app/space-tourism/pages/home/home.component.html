@@ -1,14 +1,12 @@
-<div class="cont container-fluid">
-    <div class="col one">
-        <div class="row">
-            <!-- Navbar -->
-            <app-navbar></app-navbar>
+<div class="cont container-fluid vh-100">
+
+    <!-- Navbar -->
+    <div class="row">
+        <div class="col px-0">
+            <app-navbar class="nav-t"></app-navbar>
         </div>
     </div>
-    <div class="col two">
-        <div class="row">
-            <!-- INFO HOME -->
-            <router-outlet></router-outlet>
-        </div>
-    </div>
+
+    <!-- HOMEPAGE  -->
+    <router-outlet></router-outlet>
 </div>
