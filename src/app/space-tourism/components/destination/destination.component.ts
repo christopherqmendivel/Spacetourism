@@ -1,45 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { DataService } from '../../shared/services/data.service';
+import { Destination } from '../../interfaces/destination.interface';
 
 @Component({
   selector: 'app-destination',
   templateUrl: './destination.component.html',
   styleUrls: ['./destination.component.css']
 })
-export class DestinationComponent implements OnInit{
+export class DestinationComponent {
 
   public title: string = 'pick your destination';
-  public destinationList: string[] = ['moon', 'mars', 'europa', 'titan'];
+
+  public destinations: Destination[] = this.dataService.data$.value.destinations;
+  public currentDestination: Destination = this.destinations[0];
 
   constructor(private dataService : DataService) {}
-  ngOnInit(): void {
-    console.log(this.dataService.data$.value.destinations[0])
+
+
+  changeCurrent( id: number ) {
+    this.currentDestination = this.destinations[id];
   }
-
-
-  get Image() {
-    return this.dataService.data$.value.destinations[0].images.png;
-  }
-
-  get Title() {
-    return this.dataService.data$.value.destinations[0].name
-  }
-
-  get Description() {
-      return this.dataService.data$.value.destinations[0].description;
-  }
-
-  destination() {
-    console.log('prueba')
-  }
-
-  get distanceKM() {
-    return this.dataService.data$.value.destinations[0].distance;
-  }
-
-  get distanceDays() {
-    return this.dataService.data$.value.destinations[0].travel;
-  }
-
 
 }

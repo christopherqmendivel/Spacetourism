@@ -9,31 +9,32 @@
             <div class="col-7">
                 <img 
                     class="mt-5"
-                    [src]='Image' [alt]="Image">
+                    src='{{ currentDestination.images.png }}' alt="{{ currentDestination.name }}">
             </div>
             <div class="col-5">
                 <ul class="destination-list list-group d-flex flex-row">
                     <li 
-                    *ngFor="let destination of destinationList"
-                    class="text-white subtitle destination-item"
-                    (click)="destination"
-                    >
-                    {{ destination | uppercase }}
+                    *ngFor="let destination of destinations
+                    let i = index"
+                    class="text-white subtitle destination-item "
+                    (click)="changeCurrent(i)"
+                    [ngClass]="{'active': currentDestination === destination}">
+                    {{  destination.name | uppercase }}
                     </li>
                 </ul>
-                <h1 class="title">{{ Title }}</h1>
-                <p class="description">{{ Description }}</p>
+                <h1 class="title">{{ currentDestination.name }}</h1>
+                <p class="description">{{ currentDestination.description }}</p>
 
                 <hr class="text-white line-dest">
 
                 <div class="travel-distance d-flex">
                     <div class="one">
                         <h4 class="title-detail text-uppercase"> avg. distance</h4>
-                        <span class="number">{{ distanceKM | uppercase }}</span>
+                        <span class="number">{{ currentDestination.distance | uppercase }}</span>
                     </div>
                     <div class="two">
                         <h4 class="title-detail text-uppercase"> est. travel line</h4>
-                        <span class="number">{{ distanceDays | uppercase }}</span>
+                        <span class="number">{{ currentDestination.travel | uppercase }}</span>
 
                     </div>
                     
