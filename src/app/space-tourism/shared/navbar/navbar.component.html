@@ -1,0 +1,54 @@
+<nav class="navbar navbar-expand-lg mt-4">
+    <div class="container-fluid pe-0">
+      <a class="navbar-brand rounded-circle ms-4 img-icon" href="#"
+        [ngStyle]="{'background-image': 'url(../../../../assets/logos//logo.svg)'}"
+      >  
+      </a>
+      <div class="line"></div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse navbar-items-contain" id="navbarScroll">
+        <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll p-nav d-relative d-flex align-items-center w-100" style="--bs-scroll-height: 100px;">
+          <li class="nav-item">
+            <a 
+              class="nav-link active text-white"
+              routerLink="/">
+              <span class="num-nav">
+                00
+              </span>
+               home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a 
+              class="nav-link text-white"
+              routerLink="/destination">
+              <span class="num-nav">01</span>
+               destination 
+            </a>
+          </li>
+          <li class="nav-item">
+            <a 
+              class="nav-link text-white"
+              routerLink="crew">
+              <span class="num-nav">
+                02
+              </span>
+               crew
+            </a>
+          </li>
+          <li class="nav-item">
+            <a 
+              class="nav-link text-white"
+              routerLink="/technology">
+              <span class="num-nav">
+                03
+              </span>
+              technology
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>

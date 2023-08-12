@@ -1,0 +1,14 @@
+
+
+/*
+    HOME PAGE
+*/
+
+app-navbar{
+    padding-right: 0;
+}
+
+.cont .one {
+    position: relative;
+    z-index: 1;
+}
