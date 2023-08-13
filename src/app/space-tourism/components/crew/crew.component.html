@@ -1,16 +1,13 @@
-<div class="image-bg d-flex">
-    <div class="container mt-auto cont-section">
-        <div class="row">
-            <div class="col-6">
-                <h1 class="crew subtitle mb-5"><span class="subtitle-number"> 02 </span>{{ title | uppercase }}</h1>
-            </div>
-        </div>
+<div class="image-bg d-flex flex-end">
+    <div class="container m-auto cont-section">
+
         <!-- SECTION -->
-        <div class="row d-flex align-items-center">
+        <div class="row d-flex pt-5">
 
             <!-- INFO CREW -->
             <div class="col-7">
                 <div>
+                    <h1 class="crew subtitle"><span class="subtitle-number"> 02 </span>{{ title | uppercase }}</h1>
                     <h2 class="subtitle profession text-uppercase">{{ currentCrew.role }}</h2>
                     <h3 class="title crew">{{ currentCrew.name }}</h3>
                     <p class="description">{{ currentCrew.bio }}</p>
@@ -22,6 +19,10 @@
                         let i = index"
                         (click)="changeCurrent(i)"
                         class="text-white circle-item-list"
+                        [ngClass]="
+                        {
+                            'active': currentCrew === crew,
+                        }"
                     >
                      
                     </li>
@@ -29,11 +30,13 @@
             </div>
 
             <!-- IMAGE CREW -->
-            <div class="col-5">
+            <div class="col-5 position-relative">
                 <img 
-                    class=""
-                    [src]="currentCrew.images.png" [alt]="currentCrew.name">
+                    class="position-absolute crew-img"
+                    [src]="currentCrew.images.png"
+                    [alt]="currentCrew.name">
             </div>
         </div>
+        
     </div>
 </div>

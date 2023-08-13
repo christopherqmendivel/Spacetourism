@@ -24,6 +24,7 @@
 
 .crew.subtitle {
     font-size: 1.75rem;
+    margin-bottom: 10rem;
 }
 .subtitle.profession {
     opacity: .5;
@@ -36,4 +37,16 @@
     font-size: 3.5rem;
     margin: 1.2rem 0;
 
+}
+
+.description {
+    min-height: 13rem;
+}
+
+.crew-img {
+    bottom: -10rem;
+}
+
+.active {
+    background: var(--primary1-white);
 }
