@@ -9,3 +9,31 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.crew-list {
+    gap: 1.7rem;
+}
+
+.circle-item-list {
+    background-color: var( --tertiary-gray);
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.crew.subtitle {
+    font-size: 1.75rem;
+}
+.subtitle.profession {
+    opacity: .5;
+    font-family: var(--bellefoir-font);
+    letter-spacing: unset;
+    margin: 0;
+}
+
+.title.crew {
+    font-size: 3.5rem;
+    margin: 1.2rem 0;
+
+}

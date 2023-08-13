@@ -1,3 +1,39 @@
-<div class="image-bg">
-    
+<div class="image-bg d-flex">
+    <div class="container mt-auto cont-section">
+        <div class="row">
+            <div class="col-6">
+                <h1 class="crew subtitle mb-5"><span class="subtitle-number"> 02 </span>{{ title | uppercase }}</h1>
+            </div>
+        </div>
+        <!-- SECTION -->
+        <div class="row d-flex align-items-center">
+
+            <!-- INFO CREW -->
+            <div class="col-7">
+                <div>
+                    <h2 class="subtitle profession text-uppercase">{{ currentCrew.role }}</h2>
+                    <h3 class="title crew">{{ currentCrew.name }}</h3>
+                    <p class="description">{{ currentCrew.bio }}</p>
+                </div>
+
+                <ul class="crew-list d-flex">
+                    <li
+                        *ngFor="let crew of crewList
+                        let i = index"
+                        (click)="changeCurrent(i)"
+                        class="text-white circle-item-list"
+                    >
+                     
+                    </li>
+                </ul>
+            </div>
+
+            <!-- IMAGE CREW -->
+            <div class="col-5">
+                <img 
+                    class=""
+                    [src]="currentCrew.images.png" [alt]="currentCrew.name">
+            </div>
+        </div>
+    </div>
 </div>

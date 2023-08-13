@@ -11,10 +11,6 @@
     background-size: cover;
 }
 
-.dest {
-    padding: 0 6rem;
-}
-
 .destination-list {
     gap: 1.7rem;
     list-style: none;

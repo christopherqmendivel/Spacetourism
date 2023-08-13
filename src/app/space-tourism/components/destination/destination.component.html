@@ -1,5 +1,5 @@
 <div class="image-bg destination d-flex">
-    <div class="container my-auto dest">
+    <div class="container my-auto cont-section">
         <div class="row">
             <div class="col">
                 <h3 class="subtitle mb-5"><span class="subtitle-number"> 01 </span>{{ title | uppercase }}</h3>
@@ -13,12 +13,17 @@
             </div>
             <div class="col-5">
                 <ul class="destination-list list-group d-flex flex-row">
-                    <li 
+                    <li
+                    class="text-white subtitle destination-item" 
                     *ngFor="let destination of destinations
                     let i = index"
-                    class="text-white subtitle destination-item "
                     (click)="changeCurrent(i)"
-                    [ngClass]="{'active': currentDestination === destination}">
+                    [ngClass]="
+                        {
+                            'active': currentDestination === destination,
+                        }"
+                        
+                    >
                     {{  destination.name | uppercase }}
                     </li>
                 </ul>
