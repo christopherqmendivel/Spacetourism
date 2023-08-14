@@ -51,6 +51,11 @@ p {
     margin: 1rem;
 }
 
+
+.no-root.title {
+    font-size: 3.5rem;
+    margin: 1.2rem 0;
+}
 .description {
     font-family: var(--barlow-font);
     font-size: 1.1rem;

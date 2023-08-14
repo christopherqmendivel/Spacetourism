@@ -9,3 +9,43 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.tech-list {
+    width: fit-content;
+    gap: 2rem;
+    font-size: 2rem;
+} 
+
+.tech-link {
+
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    font-family: var(--bellefoir-font);
+    width: 5rem;
+    height: 5rem;
+    cursor: pointer;
+    transition: .5s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+
+.tech-link:hover {
+    background-color: unset;
+    border-color: white;
+    color: white;
+}
+
+.active {
+    background-color: white;
+}
+
+.cont-img {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+}
+
+.c-info {
+    gap: 5rem;
+}

@@ -1,5 +1,5 @@
 <div class="image-bg d-flex flex-end">
-    <div class="container m-auto cont-section">
+    <div class="container m-auto cont-section px-3">
 
         <!-- SECTION -->
         <div class="row d-flex pt-5">
@@ -9,7 +9,7 @@
                 <div>
                     <h1 class="crew subtitle"><span class="subtitle-number"> 02 </span>{{ title | uppercase }}</h1>
                     <h2 class="subtitle profession text-uppercase">{{ currentCrew.role }}</h2>
-                    <h3 class="title crew">{{ currentCrew.name }}</h3>
+                    <h3 class="no-root title">{{ currentCrew.name }}</h3>
                     <p class="description">{{ currentCrew.bio }}</p>
                 </div>
 
@@ -30,9 +30,9 @@
             </div>
 
             <!-- IMAGE CREW -->
-            <div class="col-5 position-relative">
+            <div class="col-5 c-img">
                 <img 
-                    class="position-absolute crew-img"
+                    class="crew-img"
                     [src]="currentCrew.images.png"
                     [alt]="currentCrew.name">
             </div>
