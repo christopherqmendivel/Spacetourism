@@ -27,17 +27,17 @@
     cursor: pointer;
     transition: .5s ease;
     border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
 }
 
 
 .tech-link:hover {
-    background-color: unset;
     border-color: white;
-    color: white;
 }
 
 .active {
     background-color: white;
+    color: black;
 }
 
 .cont-img {
@@ -48,4 +48,8 @@
 
 .c-info {
     gap: 5rem;
+}
+
+.image-bg > div:first-child{
+    padding-left: 9rem;
 }
