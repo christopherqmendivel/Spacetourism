@@ -1,5 +1,5 @@
 <div class="image-bg">
-    <div class="container-fluid h-100 d-flex flex-column justify-content-center pt-5">
+    <div class="container-fluid h-100 d-flex flex-column justify-content-center pt-5 animate__animated animate__fadeIn">
         <!-- TITLE  -->
         <div class="row">
             <div class="col">
@@ -16,7 +16,7 @@
                         <li
                             *ngFor="let tech of techList;
                             let i = index"
-                            (click)="changeCurrent(i)"
+                            (click)="changeCurrent(i); animate()"
                             class="tech-link"
                             [ngClass]="{
                                 'active': currentTech === tech
@@ -26,7 +26,13 @@
                         </li>
                     </ul>
                 </div>
-                <div class="-c2 d-flex justify-content-center flex-column">
+                <div 
+                    class="-c2 d-flex justify-content-center flex-column"
+                    [ngClass]="{
+                        'animate__animated animate__fadeIn': animationState
+                    }"
+                    >
+                    
                     <span class="subtitle text-uppercase">the terminology...</span>
                     <h2 class="no-root title">{{ currentTech.name }}</h2>
                     <p class="description">{{ currentTech.description }}</p>
@@ -34,7 +40,12 @@
             </div>
 
             <!-- CONTENT IMAGE -->
-            <div class="col-4 cont-img">
+            <div 
+                class="col-4 cont-img"
+                [ngClass]="{
+                    'animate__animated animate__fadeIn': animationState
+                }"
+                >
                 <img 
                     class="tech-img"
                     [src]="currentTech.images.portrait"
