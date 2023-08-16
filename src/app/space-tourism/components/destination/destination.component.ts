@@ -13,6 +13,7 @@ export class DestinationComponent {
 
   public destinations: Destination[] = this.dataService.data$.value.destinations;
   public currentDestination: Destination = this.destinations[0];
+  public animationState: boolean = true;
 
   constructor(private dataService : DataService) {}
 
@@ -21,4 +22,11 @@ export class DestinationComponent {
     this.currentDestination = this.destinations[id];
   }
 
+  animate() {
+    this.animationState = false;
+
+    setTimeout(() => {
+      this.animationState = true;
+    }, 1);
+  }
 }

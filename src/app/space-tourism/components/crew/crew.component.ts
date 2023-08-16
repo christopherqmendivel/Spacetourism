@@ -12,10 +12,19 @@ export class CrewComponent {
   public title: string = 'meet your crew';
   public crewList: Crew[] = this.dataService.data$.value.crew;
   public currentCrew: Crew = this.crewList[0];
+  public animationState: boolean = true;
 
   constructor(private dataService: DataService ) {}
 
   changeCurrent( id: number ) {
     this.currentCrew = this.crewList[id];
+  }
+
+  animate() {
+    this.animationState = false;
+
+    setTimeout(() => {
+      this.animationState = true;
+    }, 1);
   }
 }

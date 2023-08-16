@@ -45,9 +45,6 @@
     min-height: 13rem;
 }
 
-.crew-img {
-    bottom: -10rem;
-}
 
 .active {
     background: var(--primary1-white);

@@ -1,13 +1,24 @@
 <div class="image-bg d-flex flex-end">
-    <div class="container m-auto cont-section px-3">
+    <div class="container px-3">
+
+        <!-- TITLE  -->
+        <div class="row">
+            <div class="col">
+                <h1 class="crew subtitle"><span class="subtitle-number"> 02 </span>{{ title | uppercase }}</h1>
+            </div>
+        </div>
 
         <!-- SECTION -->
         <div class="row d-flex pt-5">
 
             <!-- INFO CREW -->
             <div class="col-7">
-                <div>
-                    <h1 class="crew subtitle"><span class="subtitle-number"> 02 </span>{{ title | uppercase }}</h1>
+                <div 
+                    *ngIf="animationState"
+                    [ngClass]="{
+                        'animate__animated animate__fadeIn': animationState
+                    }"   
+                >
                     <h2 class="subtitle profession text-uppercase">{{ currentCrew.role }}</h2>
                     <h3 class="no-root title">{{ currentCrew.name }}</h3>
                     <p class="description">{{ currentCrew.bio }}</p>
@@ -17,7 +28,7 @@
                     <li
                         *ngFor="let crew of crewList
                         let i = index"
-                        (click)="changeCurrent(i)"
+                        (click)="changeCurrent(i); animate()"
                         class="text-white circle-item-list"
                         [ngClass]="
                         {
@@ -31,8 +42,12 @@
 
             <!-- IMAGE CREW -->
             <div class="col-5 c-img">
-                <img 
-                    class="crew-img"
+                <img
+                    *ngIf="currentCrew"
+                    [ngClass]="{
+                        'animate__animated animate__fadeIn': animationState
+                    }" 
+                    class="crew-img w-100"
                     [src]="currentCrew.images.png"
                     [alt]="currentCrew.name">
             </div>

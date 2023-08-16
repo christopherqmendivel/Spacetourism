@@ -27,13 +27,15 @@ ul {
     padding: 0;
 }
 
+a {
+    text-decoration: none;
+    color: unset;
+}
+
 p {
     margin-bottom: 0;
 }
 
-.cont-section {
-    padding: 0 6rem;
-}
 /* GLOBAL STYLES TITLE, SUBTITLE, TEXT-INFO*/
 .subtitle {
     font-family: var(--barlow-font-cond);
