@@ -31,7 +31,7 @@
 
 .crew.subtitle {
     font-size: 1.75rem;
-    margin-bottom: 10rem;
+    margin-bottom: 3rem;
 }
 .subtitle.profession {
     opacity: .5;
@@ -49,4 +49,11 @@
 .active {
     background: var(--primary1-white);
     opacity: 1;
+}
+
+.c-img {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    padding: 0 2rem;
 }
